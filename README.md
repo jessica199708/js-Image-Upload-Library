@@ -1,4 +1,4 @@
-# js-library-jiajiani: ImUpload - image uploader
+# js-library: ImUpload - image uploader
 
 ImUpload is a pure JavaScript library to provide an image upload widgets, it is a simple frontend library to help you easily build up your own image related website. ImUpload is applied to a variety of image formats, jpg, jpeg, png, gif, that uploaded from user's local computer, it includes two methods to upload image:  selected upload and drag and drop upload, solving the image preview showing problem and contains different processing bar styles.
 
