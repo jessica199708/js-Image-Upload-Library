@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../library/styles.css">
+    <link rel="stylesheet" href="textstyles.css">
+    <script src="../library/ImUpload.js"></script>
+    <script src="../library/examples.js"></script>
+    <title>ImUpload Libraries - Select Upload with Automatic Slideshow</title>
+</head>
+
+<body>
+    <div>
+        <a href="../index.html" id="back_main">Back to loading board</a>
+    </div>
+
+    <div class="autoupload-area">
+        <button id="autobtn">Upload Images</button>
+        <input id="autofileupload" onchange="imUpload.autoSelectUpload()" accept="image/*" type="file"
+            multiple="multiple" />
+    </div>
+
+    <button id="autodeleteBtn" onclick="imUpload.deleteAuto()">Delete</button><br>
+
+    <div id='speedDiv'>
+        <label id="speedLabel">Switch speed</label>
+        <input placeholder="3s" id="speedInput">
+        <button type="submit" value="Submit" id='speedBtn' onclick=imUpload.changeSpeed()>Change</button>
+    </div>
+
+    <div id="autoslideshow-container">
+        <div class="automySlides fade"></div>
+        <div class="numberDisplay"></div>
+    </div>
+<div class='codepart'>
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th></th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selected Upload Image With Automatic Slide Show Preview</td>
+                <td></td>
+                <td>The manually switched preview frame changes to auto automatically switched.</td>
+            </tr>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Speed Change Input Box</td>
+                <td></td>
+                <td>User can change the image switch speed by input the speed in unit second per image,<br>
+                    the default speed is three seconds per image.</td>
+            </tr>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Image Display Style</td>
+                <td></td>
+                <td>Styled the display image in width 500 and height 300, the values can be changed at <br>global
+                    variables
+                    <code>autoPreviewWidth</code> and <code>autoPreviewHeight</code>
+                </td>
+            </tr>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Counter Bar</td>
+                <td></td>
+                <td>Dislpay the current page number and total images number in (current / total) style.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="containhtml">HTML</div>
+    <hr>
+    <pre>
+                <code>
+                    &ltdiv class="autoupload-area"&gt
+                        &ltbutton id="autobtn"&gt Upload Images &lt/button&gt
+                        &ltinput id="autofileupload" onchange="imUpload.autoSelectUpload()" accept="image/*" type="file" multiple="multiple" /&gt
+                    &lt/div&gt
+                    &ltbutton id="autodeleteBtn" onclick="imUpload.deleteAuto()"&gt Delete &lt/button&gt
+                    &ltdiv id='speedDiv'&gt
+                        &ltlabel id="speedLabel"&gt Switch speed &lt/label&gt
+                        &ltinput placeholder="3s" id="speedInput"&gt
+                        &ltbutton type="submit" value="Submit" id='speedBtn' onclick=imUpload.changeSpeed()&gt Change &lt/button&gt
+                    &lt/div&gt
+                    &ltdiv id="autoslideshow-container"&gt
+                        &ltdiv class="automySlides fade"&gt&lt/div&gt
+                    &lt/div&gt
+
+                </code>
+            </pre>
+</div>
+
+
+
+
+
+</body>
+
+</html>

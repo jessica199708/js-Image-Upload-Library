@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="api_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ImUpload Libraries - API Description</title>
+</head>
+
+<body>
+    <h1>API</h1>
+    <h2>Getting Started</h2>
+    <p>📷 ImUpload Overview</p>
+    <div>ImUpload is a pure JavaScript library to provide an image upload widgets, it is a simple frontend library to
+        help you
+        easily build up your own image related website. It is applied to a variety of image formats, jpg, jpeg, png,
+        gif,
+        that uploaded from user's local computer, it includes two methods to upload image: selected upload and drag and
+        drop
+        upload, solving the image preview showing problem and contains different processing bar styles.</div>
+    <br>
+    <hr>
+    <p>📷 File Description</p>
+    <div>Download the ImUpload package from Github <i style="font-size:24px" class="fa">&#xf09b;</i> to get the main library JavaScript file and CSS style file in the <u>pub file</u>.</div>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th></th>
+                <th>Description</th>
+                <th></th>
+                <th>Path</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ImUpload.js</td>
+                <td></td>
+                <td>It is the main file where you can find all API inside, you can import <br>componemts in the library that you would like to use
+                    in your<br> website from by writing the script in your HTML file <br><code>&ltscript src="/pub/library/ImUpload.js"&gt&lt/script&gt</code>
+                </td>
+                <td></td>
+                <td>js-library-jiajiani/pub/library/ImUpload.js</td>
+            </tr>
+            <tr>
+                <td>styles.css</td>
+                <td></td>
+                <td>Styles for all components in thos library are written inside this main<br>
+                    CSS file, import it in your HTML file as the stylesheet<br>
+                    <code>&ltlink rel="stylesheet" href="styles.css"&gt</code>
+                </td>
+                <td></td>
+                <td>js-library-jiajiani/pub/library/ImUpload.js</td>
+            </tr>
+            <tr>
+                <td>img Folder</td>
+                <td></td>
+                <td>All images that used in the library components are stored in the img<br> folder, 
+                    if you would like to customized the components, you can change the images inside.
+                </td>
+                <td></td>
+                <td>js-library-jiajiani/pub/library/img/imageName</td>
+            </tr>
+            <tr>
+                <td>exampleHTML Folder</td>
+                <td></td>
+                <td>You can find the examples for each components in the library inside the exampleHTML folder.
+                </td>
+                <td></td>
+                <td>js-library-jiajiani/pub/exampleHTML</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr><br>
+    <p>📷 Components Usage Description</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th></th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selected Upload Image With Preview</td>
+                <td></td>
+                <td>Below HTML provided an styled upload button and a frame for the image preview
+                    display, the demensions <br> of the preview are width 500px and height 300px. The width
+                    and height can be customized by modifying the <br> global variables<code>previewWidth</code> and
+                    <code>previewHeight</code>
+                    in ImUpload.js.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv class="upload-area"&gt
+                  &ltbutton id="btn"&gt Upload Images &lt/button&gt
+                  &ltinput id="fileupload" onchange="imUpload.selectWithPreview()" accept="image/*" type="file" multiple="multiple" /&gt
+                &lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Drag and Drop Upload Image With Preview</td>
+                <td></td>
+                <td>An styled drag and drop area and styled frame for the image preview
+                    display provided.</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv id="drop-region"&gt
+                  &ltdiv class="drop-message"&gt
+                        Drag & Drop images here to upload
+                  &lt/div&gt
+                  &ltdiv id="image-preview"&gt&lt/div&gt
+                &lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Preview Frame Component -- Side Button</td>
+                <td></td>
+                <td>Two side buttons are used to switch to the left/right image in the preview frame.</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv id="slideshow-container"&gt
+                    &ltdiv class="mySlides fade" style="display:block"&gt&lt/div&gt
+                    &lt span id="countBar"&gt&lt/span&gt
+                    &lta id="prev"&gt &#10094; &lt/a&gt
+                    &lta id="next"&gt &#10095; &lt/a&gt
+                &lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Preview Frame Component -- Counter Bar</td>
+                <td></td>
+                <td>A counter bar can be added to the preview frame to count how many images that <br>user uploaded in
+                    the preview</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                 &ltspan id="countBar"&gt&lt/span&gt 
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Preview Frame Component -- Dot</td>
+                <td></td>
+                <td>Dots also can be used to switch the images in preview frame, user can<br> click the dot and switch
+                    to the
+                    corresponding image. The default dots number is six.</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv class="dotBar"&gt
+                    &ltspan class="dot"&gt&lt/span&gt
+                    &ltspan class="dot"&gt&lt/span&gt
+                    &ltspan class="dot"&gt&lt/span&gt
+                    &ltspan class="dot"&gt&lt/span&gt
+                    &ltspan class="dot"&gt&lt/span&gt
+                    &ltspan class="dot"&gt&lt/span&gt
+                &lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Selected Upload Image With Automatic Slide Show Preview</td>
+                <td></td>
+                <td>The manually switched preview frame changes to auto automatically switched.</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv class="autoupload-area"&gt
+                    &ltbutton id="autobtn"&gt Upload Images &lt/button&gt
+                    &ltinput id="autofileupload" onchange="imUpload.autoSelectUpload()" accept="image/*" type="file" multiple="multiple" /&gt
+                &lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Delete Button</td>
+                <td></td>
+                <td>Add delete button to delete the current display image.</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+              &ltbutton id="autodeleteBtn" onclick="imUpload.deleteAuto()"&gt Delete &lt/button&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Speed Change Input Box</td>
+                <td></td>
+                <td>User can change the image switch speed by input the speed in unit second per image,<br>
+                    the default speed is three seconds per image.</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv id='speedDiv'&gt
+                    &ltlabel id="speedLabel"&gt Switch speed &lt/label&gt
+                    &ltinput placeholder="3s" id="speedInput"&gt
+                    &ltbutton type="submit" value="Submit" id='speedBtn' onclick=imUpload.changeSpeed()&gt Change &lt/button&gt
+                &lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Image Display Style</td>
+                <td></td>
+                <td>Styled the display image in width 500 and height 300, the values can be changed at <br>global
+                    variables
+                    <code>autoPreviewWidth</code> and <code>autoPreviewHeight</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv id="autoslideshow-container"&gt
+                    &ltdiv class="automySlides fade"&gt&lt/div&gt
+                &lt/div&gt
+            </code>
+         </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Automatic Slide Show Preview Component -- Counter Bar</td>
+                <td></td>
+                <td>Dislpay the current page number and total images number in (current / total) style.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                &ltdiv class="numberDisplay"&gt&lt/div&gt
+            </code>
+        </pre>
+    <table>
+        <tbody>
+            <tr>
+                <td>Progress Bar -- File Transfer Process Animation</td>
+                <td></td>
+                <td>It is a styled progress bar that can increment from 0% to 100% by pressing Start button,<br>
+                    the default styles are <code>src="img/image_file.png</code> and
+                    <code>src="img/image_server.png</code><br>
+                    you can change them in HTML.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+            <code>
+                    &ltform&gt
+                       &ltimg id="fileImage" src="img/image_file.png" /&gt
+                        &ltdiv id="myProgress"&gt
+                            &ltdiv id="myBar"&gt&lt/div&gt
+                        &lt/div&gt
+                        &ltimg id="serverImage" src="img/image_server.png" /&gt
+                        &ltdiv class="container"&gt
+                            &ltinput id="fileBtn" type="button" value="Start" onclick="imUpload.fileProgress();" /&gt
+                        &lt/div&gt
+                    &lt/form&gt
+            </code>
+        </pre>
+    <h2>Methods</h2>
+    <p>📷 Methods Description</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Method Name</th>
+                <th></th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>ImUploadGenerator.selectWithPreview()</code></td>
+                <td></td>
+                <td>Click an Upload button and select the image from local computer to upload, and the images <br> will
+                    display
+                    at the bottom preview frame. Support multiple-time upload, delete image by using the delete button
+                    at the <br>
+                    right hand side of the preview. A counter bar indicate how many images have been uploaded, <br>
+                    the number changes synchronically with add/delete images. Two ways to swtich preview images by using
+                    side <br>
+                    button or dots. The current display image enlarge when user move mouse over it.
+                </td>
+            </tr>
+            <tr>
+                <td><code>ImUploadGenerator.dragWithPreview()</code></td>
+                <td></td>
+                <td>Drag and drop images from local computer to a specific area to upload images and display in preview
+                    frame. <br>
+                    The preview has same functions as described above.
+                </td>
+            </tr>
+            <tr>
+                <td><code>ImUploadGenerator.autoSelectUpload()</code></td>
+                <td></td>
+                <td>Click an Upload button and select the image and display in a automatic switch preview frame. The
+                    default<br>
+                    switch speed is 3 second per image, the speed changing input box is provided to change the
+                    speed.<br>
+                    And a delete button can delete the current displayed image.
+                </td>
+            </tr>
+            <tr>
+                <td><code>ImUploadGenerator.changeSpeed()</code></td>
+                <td></td>
+                <td>Change the image switch speed in automatic switch preview.
+                </td>
+            </tr>
+            <tr>
+                <td><code>ImUploadGenerator.deleteAuto()</code></td>
+                <td></td>
+                <td>Delete button in automatic switch preview.
+                </td>
+            </tr>
+            <tr>
+                <td><code>ImUploadGenerator.fileProgress()</code></td>
+                <td></td>
+                <td>A styled progress bar that can be used to show the image uploaded process from user computer<br>
+                    to server side, the rate of progress is displayed at the bar.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Event</h2>
+    <p>📷 Event Description</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th></th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dragenter</td>
+                <td></td>
+                <td>The user dragged images onto the specific drop area for drop and drag upload.
+            </tr>
+            <tr>
+                <td>dragleave</td>
+                <td></td>
+                <td>The user dragged images out of the specific drop area for drop and drag upload.
+                </td>
+            </tr>
+            <tr>
+                <td>dragover</td>
+                <td></td>
+                <td>The user is dragging images over the specific drop area for drop and drag upload.
+                </td>
+            </tr>
+            <tr>
+                <td>drop</td>
+                <td></td>
+                <td>The user dropped images onto the specific drop area for drop and drag upload.
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

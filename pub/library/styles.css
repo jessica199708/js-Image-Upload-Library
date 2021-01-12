@@ -1,0 +1,318 @@
+/* CSS for ImUpload library */
+html, body{
+    width: 100%;
+    height: 100%;
+    background: white;
+    background-size: 100% 100%;
+}
+
+/* Upload button style */
+.upload-area {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 415px;
+  margin-top: 20px;
+
+}
+
+#btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-area input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#drop-region {
+    background-color: #b6d4d4;
+    border-radius:20px;
+    box-shadow:0 0 35px rgba(0,0,0,0.05);
+    width:800px;
+    padding:60px 40px;
+    text-align: center;
+    margin-left: 300px;
+    cursor:pointer;
+    transition:.3s;
+    font-size: 25px;
+    color: grey;
+}
+#drop-region:hover {
+    box-shadow:0 0 45px rgba(0,0,0,0.1);
+}
+
+
+
+* {box-sizing:border-box}
+
+
+/* Slider Style*/
+/* Slideshow container */
+#slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.mySlides {
+  display: none;  /* Hide the images by default */
+  border: solid 1px;
+  width: 490px;
+  height: 300px;
+  background-image: url("img/001_IMG.png");
+  background-size: 500px, 650px;
+} 
+
+
+#countBar{
+  cursor: pointer;
+  position: absolute;
+  font-size: 18px;
+  bottom: -30px;
+  color: 	#808080;
+}
+
+
+/* Delete symbol */
+.delete {
+  cursor: pointer;
+  position: absolute;
+  padding-left: 24px;
+  color: 	grey;
+  font-size: 50px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.delete:hover {
+   transform: scale(1.2);
+}
+
+
+/* Next & previous buttons */
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-left: -52px;
+  margin-top: -22px;
+  padding: 16px;
+  color: 	#808080;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px 3px 3px 3px;
+  user-select: none;
+}
+
+
+#next {
+  right: 0;
+  border-radius: 3px 3px 3px 3px;
+  margin-right: -43px;
+}
+
+
+#prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Mouseover to enlarge image */
+.uploadImage {
+    width: 488px;
+    height: 298px;
+}
+
+.uploadImage:hover {
+    border: 2px solid pink;
+    transform: scale(1.1);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Dot at the botton of the slide */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.dotBar {
+  text-align:center;
+}
+
+/* Automatic slideshow */
+.autoupload-area {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 415px;
+  margin-top: 30px;
+}
+
+#autobtn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.autoupload-area input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+
+#autodeleteBtn {
+  border: 2px solid gray;
+  color: white;
+  background-color: gray;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+#speedDiv {
+  margin-left:500px;
+  margin-top:5px;
+  /* position: absolute; */
+  display: inline-block;
+}
+
+#speedLabel {
+  font-size: 18px;
+  color: #717171;
+}
+
+#speedBtn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+
+* {box-sizing: border-box;}
+
+.automySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+#autoslideshow-container {
+  max-width: 1000px;
+  position: relative;
+  top: 2%;
+  left: 20%;
+  margin: auto;
+}
+
+
+.numberDisplay {
+  color: #717171;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -15%;
+}
+
+
+/* Slider Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.2s;
+  animation-name: fade;
+  animation-duration: 0.2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}  
+  to {opacity: 1}
+}
+
+
+
+#fileBtn {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  background-color: #c9c4c4;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  outline:none;
+}
+
+/* Progress bar #1 */
+#fileBtn:hover {
+  background-color: pink;
+  color: white;
+}
+
+#myProgress {
+  position: absolute;
+  /* left: 300px; */
+  background-color: rgb(192,192,192,0.5);
+  border-radius: 5px;
+  top: 150px;
+}
+
+#myBar {
+  border-radius: 5px;
+  height: 30px;
+  background-color: rgb(176,196,222,0.5);
+  text-align: right;
+}
+

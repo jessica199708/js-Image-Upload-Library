@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ImUpload Libraries - Select Upload</title>
+
+    <!------- Loading JS scripts ------->
+    <!-- When loading JS scripts, considerations should be made regarding when
+         the DOM is being loaded, and when different scripts 
+         depend on each other. Below are a few ways to load the scripts.
+     -->
+
+    <!-- Load any CSS before the JS -->
+    <link rel="stylesheet" href="../library/styles.css">
+    <link rel="stylesheet" href="textstyles.css">
+    <script src="../library/ImUpload.js"></script>
+    <script src="../library/examples.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <a href="../index.html" id="back_main">Back to loading board</a>
+    </div>
+
+    <!-- Image Upload -->
+    <div class="upload-area">
+        <button id="btn">Upload Images</button>
+        <input id="fileupload" onchange="imUpload.selectWithPreview()" accept="image/*" type="file"
+            multiple="multiple" />
+    </div>
+
+    <!-- Slider  -->
+    <div id="slideshow-container">
+        <!-- Slider default Preview page -->
+        <div class="mySlides fade" style="display:block"></div>
+        <!-- Side buttons: switch to previous or next image locate at the left and right side of silder-->
+        <a id="prev">&#10094;</a>
+        <a id="next">&#10095;</a>
+        <a id="countBar"></a>
+    </div>
+    <br>
+
+    <!-- Dots dislpay at the bottom, there are six, developer can increase or decrease -->
+    <div class="dotBar">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+<div class='codepart'>
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th></th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selected Upload Image With Preview</td>
+                <td></td>
+                <td>Below HTML provided an styled upload button and a frame for the image preview<br>
+                    display, the demensions of the preview are width 500px and height 300px. <br>The width
+                    and height can be customized by modifying the global <br>variables<code>previewWidth</code> and
+                    <code>previewHeight</code>
+                    in ImUpload.js.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="containhtml">HTML</div>
+    <pre>
+        <code>
+            &ltdiv class="upload-area"&gt
+                &ltbutton id="btn"&gt Upload Images &lt/button&gt
+                &ltinput id="fileupload" onchange="imUpload.selectWithPreview()" accept="image/*" type="file" multiple="multiple" /&gt
+            &lt/div&gt
+        </code>
+    </pre>
+
+</div>
+
+
+</body>
+
+</html>

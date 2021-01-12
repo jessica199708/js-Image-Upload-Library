@@ -1,0 +1,116 @@
+html, body{
+   /* background:url("exampleHTML/img/002.jpg"); */
+   /* background:url("exampleHTML/img/002.jpg") center center cover no-repeat fixed; */
+  background: url(exampleHTML/landingimg/002.jpg) center center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size: 100% auto;
+}
+
+#leadArea::after {
+  display: flex;
+  
+}
+
+h1 {
+   color:#346085;
+   font-size: 100px;
+   text-align: center;
+   font-family: fantasy;
+}
+
+.link_to_example {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(143, 140, 140);
+    font-size: 25px;
+    /* display: block; */
+    font-family: Cursive;
+    font-weight: bold;
+    display:inline-block;
+}
+
+
+
+h4 {
+    color: #87CEEB;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.display {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+
+img {
+    margin-left: 90px;
+    margin-top: 20px;
+    display: block;
+    width: 70%;
+    border: 10px solid rgba(0, 0, 0, 0.7);
+}
+
+#img1{
+     display: block;
+     border: 10px solid rgba(0, 0, 0, 0.7);
+     margin-left: 200px;
+}
+
+
+
+#exampleArea{
+    border: 5px gray dotted;
+    width:95%;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 30px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#downloadArea {
+    float:right;
+    height: 50px;
+    border: 5px gray dotted;
+    width: 40%;
+    height: 100px;
+    margin-right: 100px;
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+#APIArea{
+    float:right;
+    height: 50px;
+    border: 5px gray dotted;
+    width:40%;
+    height: 100px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.link_to_page {
+    text-decoration: none;
+    text-align: center;
+    color: 		#AFEEEE;
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.link_to_page:hover {
+    color: 	#87CEEB;
+}
+
+.link_to_example:hover {
+    /* color:#38b4aa; */
+    color: 	#87CEEB;
+}
+
+

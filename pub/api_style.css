@@ -1,0 +1,65 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+thead{
+    color:rgb(110, 155, 158);
+}
+
+tr{
+    border-top: 2px solid rgb(110, 155, 158, 0.2);
+    line-height: 1.8em;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h1, h2 {
+    color: rgb(110, 155, 158);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+td {
+    color: gray;
+    font-size: 15px;
+    text-align: center; 
+    padding-top: 15px;
+}
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 5px;
+  font-size: 15px;
+}
+
+code{
+    background-color: #eee;
+}
+
+hr {
+    height:2px;
+    border-width:0;
+    color: rgb(110, 155, 158, 0.7);
+    background-color: rgb(110, 155, 158, 0.7);
+    margin-top: 10px;
+
+}
+
+div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    line-height: 1.5;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+img {
+    width: 500px;
+    margin-left: 400px;
+    border: 1px dotted rgb(110, 155, 158);
+
+}
